@@ -1,4 +1,4 @@
-# Redis Sentinel Cluster
+# Redis Sentinel Cluster Docker Image
 
 This image spins up a Redis Sentinel with master group name `mymaster`.
 
