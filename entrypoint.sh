@@ -11,7 +11,7 @@ then
 fi
 
 tmux new -s redis-6381 -d "redis-server ./redis-config.conf --port 6381 $CACHE_OPTIONS"
-tmux new -s redis-6382 -d "redis-server ./redis-config.conf --port 6382 $CACHE_OPTIONS"
+tmux new -s redis-6382 -d "redis-server ./redis-config.conf --port 6382 --slaveof localhost 6381 $CACHE_OPTIONS"
 
 tmux new -s redis-sentinel-26381 -d "redis-server ./redis-sentinel-config.conf --sentinel --port 26381"
 tmux new -s redis-sentinel-26382 -d "redis-server ./redis-sentinel-config.conf --sentinel --port 26382"
