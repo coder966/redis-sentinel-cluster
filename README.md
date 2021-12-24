@@ -8,7 +8,7 @@ Redis password: `mypassword`
 
 ## How to use this Image
 
-`$ docker run -d -p 6381-6382:6381-6382 -p 26381:26383:26381:26383 coder966/redis-sentinel-cluster:latest`
+`$ docker run -d -p 6381-6382:6381-6382 -p 26381-26383:26381-26383 coder966/redis-sentinel-cluster:latest`
 
 if you want to configure Redis as an LRU cache, please add `-e "AS_CACHE=yes"`.
 
