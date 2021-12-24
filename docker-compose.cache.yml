@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  redis-sentinel-cache-cluster:
+    image: coder966/redis-sentinel-cluster:dev
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "6381:6381"
+      - "6382:6382"
+      - "26381:26381"
+      - "26382:26382"
+      - "26383:26383"
+    environment:
+      - AS_CACHE=yes

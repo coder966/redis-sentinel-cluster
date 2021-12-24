@@ -1,8 +1,8 @@
 version: "3.4"
 
 services:
-  redis-sentinel-cluster:
-    image: coder966/redis-sentinel-cluster:0.0.1
+  redis-sentinel-db-cluster:
+    image: coder966/redis-sentinel-cluster:dev
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -12,5 +12,3 @@ services:
       - "26381:26381"
       - "26382:26382"
       - "26383:26383"
-    environment:
-      - AS_CACHE=yes
