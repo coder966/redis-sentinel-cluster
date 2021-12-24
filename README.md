@@ -1,12 +1,14 @@
 # Redis Sentinel Cluster Docker Image
 
-This image spins up Redis Sentinel with master group name `mymaster`.
+This image simulates a Redis cluster of 2 nodes and a Redis Sentinel cluster of 3 nodes.
+Redis nodes: master on port `6381` and salve on port `6382`.
+Redis Sentinel nodes: ports 26381 through 26383.
+Redis Sentinel master group name: `mymaster`.
+Redis password: `mypassword`
 
-The Redis cluster consists of two nodes on ports `6381` (master) and `6382` (replica), with password `mypassword`.
-The Redis Sentinel cluster consists of three nodes on ports `26381`, `26382`, and `26383`.
+## How to use this Image
 
-
-
+`$ docker run -d -p 6381-6382:6381-6382 -p 26381:26383:26381:26383 coder966/redis-sentinel-cluster:latest`
 
 ## License
 
@@ -25,4 +27,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
