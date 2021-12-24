@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 services:
   redis-sentinel-cluster:
@@ -6,10 +6,9 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    ports: 
+    ports:
       - "6381:6381"
       - "6382:6382"
       - "26381:26381"
       - "26382:26382"
       - "26383:26383"
-
